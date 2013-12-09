@@ -15,7 +15,7 @@ require Exporter;
 our @ISA = 'Exporter';
 our @EXPORT = qw(hijri_date hijri_now hijri_time);
 
-our $VERSION = '1.0';
+our $VERSION = '1.01';
 
 our %weekday = (
 								'en' => ["Ahad","Ithnin","Thulatha","Arbaa","Khams","Jumuah","Sabt"],
@@ -308,10 +308,10 @@ Date::HijriDate - Hijri Islamic Dates Calendar
 
 	use Date::HijriDate;
 
-	my $day = 8;				# day of the month
+	my $day = 8;			# day of the month
 	my $month = 11;			# month 0..11
 	my $year = 2013;		# yyyy format
-	my $caltype = 1;			# (0 = Julian; 1 = Gregorian)
+	my $caltype = 1;		# (0 = Julian; 1 = Gregorian)
 	my $lang = "en";		# available languages: en, ar
 	my %ret;
 	
@@ -329,7 +329,7 @@ Date::HijriDate - Hijri Islamic Dates Calendar
 	print "Western date: $ret{day}-$ret{month}-$ret{year}\n";
 	
 	#Arithmetical calendar type 	  	day 	month 	year (AH) 	 
-	print "'Arithmetical calendar type'	day		month		'year (AH)'	'month name'	\n";
+	print "'Arithmetical calendar type'	day	month	'year (AH)'	'month name'\n";
 	
 	# all returned month 0..11
 
@@ -368,32 +368,32 @@ Date::HijriDate - Hijri Islamic Dates Calendar
 
 	Western date: 9-12-2013
 	'Arithmetical calendar type'	day-month-'year (AH)'	'month name'	
-	Ic [15, civil]								5-2-1435							Safar
-	Ia [15, astronomical]				6-2-1435							Safar
-	IIc [16, civil]							5-2-1435							Safar
-	IIa [16, astronomical='MS HijriCalendar'] 6-2-1435	Safar
-	IIIc [Fātimid, civil]					5-2-1435							Safar
-	IIIa [Fātimid, astronomical]	6-2-1435							Safar
-	IVc [Habash al-Hāsib, civil]	5-2-1435							Safar
-	IVa [Habash al-Hāsib, astronomical] 6-2-1435				Safar
-	Julian day:											2456636
-	Weekday number 0..7, 0=Sunday:		1
-	Hijri day name:									Ithnin
-	Calender type:										Gregorian
+	Ic [15, civil]		5-2-1435	Safar
+	Ia [15, astronomical]	6-2-1435	Safar
+	IIc [16, civil]	5-2-1435	Safar
+	IIa [16, astronomical='MS HijriCalendar']	6-2-1435	Safar
+	IIIc [Fātimid, civil]	5-2-1435	Safar
+	IIIa [Fātimid, astronomical]	6-2-1435	Safar
+	IVc [Habash al-Hāsib, civil]	5-2-1435	Safar
+	IVa [Habash al-Hāsib, astronomical]	6-2-1435	Safar
+	Julian day:	2456636
+	Weekday number 0..7, 0=Sunday:	1
+	Hijri day name:	Ithnin
+	Calender type:		Gregorian
 
 =head1 DESCRIPTION
 
 This module calculates Islamic Hijri calender dates using civil and astronomical 8 methods.
 
 	Arithmetical calendar type:
-		Ic [15, civil]
-		Ia [15, astronomical]
-		IIc [16, civil]
-		IIa [16, astronomical = "MS HijriCalendar"]
-		IIIc [Fātimid, civil]
-		IIIa [Fātimid, astronomical]
-		IVc [Habash al-Hāsib, civil]
-		IVa [Habash al-Hāsib, astronomical]
+	Ic [15, civil]
+	Ia [15, astronomical]
+	IIc [16, civil]
+	IIa [16, astronomical = "MS HijriCalendar"]
+	IIIc [Fātimid, civil]
+	IIIa [Fātimid, astronomical]
+	IVc [Habash al-Hāsib, civil]
+	IVa [Habash al-Hāsib, astronomical]
 
 Exports three methods hijri_time, hijri_now, and hijri_date.
 All methods return date information in a single hash.
@@ -420,8 +420,8 @@ L<Religion::Islam::PrayerTimes>
 
 =head1 AUTHOR
 
-Dr. Ahmed Amin Elsheshtawy, Ph.D, EE E<lt>webmaster@islamware.com<gt>
-Website: L<http://www.islamware.com>  L<http://www.mewsoft.com>
+Ahmed Amin Elsheshtawy,  <support@islamware.com> <support@mewsoft.com>
+Website: http://www.islamware.com   http://www.mewsoft.com
 
 =head1 COPYRIGHT AND LICENSE
 
